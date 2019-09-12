@@ -1,0 +1,62 @@
+.divTable{
+	display: table;
+    width: 100%;
+    /* padding-right: 52px; */
+}
+.divTableBody {
+    display: table-row-group;
+    background: #f2f9ff;
+}
+.divTableRow {
+    display: flex;
+    height: 44px;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.mydivTableRow {
+    height: 43px;
+    border-bottom: 1px solid #afa9a9;
+    color: #000;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 46px;
+}
+.divTableCell {
+    width: 20%;
+    border-left: 2px solid #776f6f;
+    padding-left: 0.4%;
+    height: 3.6vh;
+    line-height: 32px;
+}
+.mydivTableCell{
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 366%;
+    color: #495F6A;
+    padding-left: 0.5%;
+}
+.myagent{
+    border-left: unset;
+}
+.wrper{
+    border: 2px solid #989191;  
+}
+.footsr{
+    width: inherit;
+    height: 4vh;
+    position: relative;
+}
+.wrpftd{
+    position: absolute;
+    right: 10px;
+    top: 8px; 
+}

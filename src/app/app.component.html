@@ -1,0 +1,62 @@
+
+<div class="wrper">
+        <div class="divTable">
+                <div class="divTableBody">
+                    <div class="divTableRow">
+                            <div class="divTableCell myagent" >Agent ID</div>
+                            <div class="divTableCell" >Country</div>
+                            <div class="divTableCell" >Adress</div>
+                            <div class="divTableCell" >Date</div>
+                    </div>
+                </div>
+            </div>
+             
+             <div class="mydivTable" >  
+                <div class="mydivTableBody"> 
+                <div *ngFor="let b of missionArray.reverse();" >
+                        <div class="mydivTableRow" >
+                                <div class="mydivTableCell">
+                                  {{b.agent}}
+                                </div>
+                                <div class="mydivTableCell">
+                                    {{b.country}}
+                                </div>   
+                                <div class="mydivTableCell">
+                                    {{b.address}}
+                                </div>   
+                                <div class="mydivTableCell">
+                                    {{b.date}}
+                                </div>  
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footsr">
+                    <div class="wrpftd"><span>{{ missionArray?.length }}</span> <span> Missions</span></div>
+            </div>
+</div>
+
+<div>
+    <ul>
+        <li *ngFor="let recipient of missmap | keyvalue">
+            {{recipient.key}}  has  <!-- {{recipient.value}}-->
+            isolated :( <ng-container *ngFor="let val of recipient.value.data">
+                    
+                        <ng-container *ngIf="val.isIsolate">
+                                {{val.agent}},
+                        </ng-container>
+                   
+                   
+            </ng-container> )
+            Non-isolated :(  <ng-container *ngFor="let val of recipient.value.data">
+                  
+                        <ng-container *ngIf="!val.isIsolate">
+                                {{val.agent}},
+                       </ng-container>
+                   
+            </ng-container> )
+           
+        </li>
+    </ul>
+</div>
